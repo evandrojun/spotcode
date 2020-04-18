@@ -1,7 +1,9 @@
-class Api::V1::RecentlyHeardsController < ApplicationController
-  def create
-    current_user.recently_heards.create(album_id: params[:album_id])
+module Api::V1
+  class RecentlyHeardsController < ApplicationController
+    def create
+      current_user.recently_heards.create(album_id: params[:album_id])
 
-    head :ok
+      head :ok
+    end
   end
 end
